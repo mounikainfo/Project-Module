@@ -37,7 +37,7 @@ resource "aws_eks_node_group" "eks_ng_public" {
   cluster_name    = aws_eks_cluster.sta_cluster.name
   node_group_name = var.node_group_name
   node_role_arn   = var.node_role_arn
-  version         = var.cluster_version
+  
 
   subnet_ids = [
     var.private_app_subnet_az1_id,

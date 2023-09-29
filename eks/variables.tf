@@ -10,7 +10,6 @@ variable "sec" {}
 #node group variables
 variable "node_group_name" {}
 variable "node_role_arn" {}
-variable "cluster_version" {}
 variable "private_app_subnet_az1_id" {}
 variable "private_app_subnet_az2_id" {}
 variable "capacity_type" {}
