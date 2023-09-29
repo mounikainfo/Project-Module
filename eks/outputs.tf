@@ -20,23 +20,23 @@ output "eks_policy_attach" {
 
 output "cluster_id" {
   description = "The name/id of the EKS cluster."
-  value       = aws_eks_cluster.eks_cluster.id
+  value       = aws_eks_cluster.sta_cluster.id
 }
 
 output "eks_name" {
-    value = aws_eks_cluster.eks_cluster.name 
+    value = aws_eks_cluster.sta_cluster.name 
 }
 
 output "cluster_arn" {
-    value = aws_eks_cluster.eks_cluster.arn
+    value = aws_eks_cluster.sta_cluster.arn
 }
 
 output "cluster_endpoint" {
-    value = aws_eks_cluster.eks_cluster.endpoint
+    value = aws_eks_cluster.sta_cluster.endpoint
 }
 
 output "cluster_version" {
-    value = aws_eks_cluster.eks_cluster.version
+    value = aws_eks_cluster.sta_cluster.version
 }
 
 
