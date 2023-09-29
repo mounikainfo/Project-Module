@@ -1,23 +1,4 @@
 # eks iam output variables
-
-output "cluster_iam_role_name" {
-  description = "IAM role name of the EKS cluster"
-  value       = aws_iam_role.eks_master_role.name
-}
-
-output "cluster_iam_role_arn" {
-    value = aws_iam_role.eks_master_role.arn
-}
-
-output "policy_attach" {
-    value = aws_iam_role_policy_attachment.eks_AmazonEKSClusterPolicy.name
-}
-
-output "eks_policy_attach" {
-  value = aws_iam_role_policy_attachment.eks_AmazonEKSVPCResourceController.name
-}
-
-
 output "cluster_id" {
   description = "The name/id of the EKS cluster."
   value       = aws_eks_cluster.sta_cluster.id
