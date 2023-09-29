@@ -44,9 +44,9 @@ output  "identity"  {
   value = aws_eks_cluster.sta_cluster.identity[0].oidc[0].issuer
 }
 
-# # output "thumb" {
-# #   value = aws_iam_openid_connect_provider.oidc_provider
-# # }
+output "thumb" {
+  value = aws_iam_openid_connect_provider.oidc_provider
+}
 
 
 output "identity_all" {
