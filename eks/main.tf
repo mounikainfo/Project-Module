@@ -1,6 +1,7 @@
 # eks cluster creation 
 
 resource "aws_eks_cluster" "sta_cluster" {
+  # name = "sta_cluster"
   name = var.cluster_name
   role_arn = var.role_arn
   version  = var.cluster_version
