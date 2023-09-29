@@ -31,3 +31,32 @@ kubernetes_network_config {
 #   ]
 }
 
+# node group creation
+
+resource "aws_eks_node_group" "eks_ng_public" {
+  cluster_name    = aws_eks_cluster.sta_cluster.name
+  node_group_name = var.node_group_name
+  node_role_arn   = var.node_role_arn
+  version         = var.cluster_version
+
+  subnet_ids = [
+    var.private_app_subnet_az1_id,
+    var.private_app_subnet_az2_id
+  ]
+
+  capacity_type  = var.capacity_type
+  ami_type = var.ami_type
+  instance_types = var.instance_types
+  disk_size = 20
+
+  scaling_config {
+    desired_size = var.desired_size
+    max_size     = var.max_size
+    min_size     = var.min_size
+  }
+
+  update_config {
+    max_unavailable = var.max_unavailable
+  }
+}
+
