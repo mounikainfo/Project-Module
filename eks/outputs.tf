@@ -55,7 +55,7 @@ output "cluster_version" {
 
 
 output  "identity"  { 
-  value = aws_eks_cluster.eks_cluster.identity[0].oidc[0].issuer
+  value = aws_eks_cluster.sta_cluster.identity[0].oidc[0].issuer
 }
 
 # # output "thumb" {
@@ -64,5 +64,5 @@ output  "identity"  {
 
 
 output "identity_all" {
-  value = aws_eks_cluster.eks_cluster.identity
+  value = aws_eks_cluster.sta_cluster.identity
 }
