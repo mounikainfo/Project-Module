@@ -33,7 +33,7 @@ resource "aws_iam_role_policy_attachment" "eks_AmazonEKSVPCResourceController" {
 resource "aws_eks_cluster" "eks_cluster" {
   name = "eks-cluster"
   role_arn = aws_iam_role.eks_master_role.arn
-  version  = var.version
+  version  = var.my_version
 
   # security_groups  = [var.app_server_security_group_id]
   vpc_config {
