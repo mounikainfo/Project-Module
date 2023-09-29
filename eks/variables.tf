@@ -10,8 +10,6 @@ variable "sec" {}
 #node group variables
 variable "node_group_name" {}
 variable "node_role_arn" {}
-variable "private_app_subnet_az1_id" {}
-variable "private_app_subnet_az2_id" {}
 variable "capacity_type" {}
 variable "ami_type" {}
 variable "instance_types" {}
