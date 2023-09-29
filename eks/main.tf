@@ -12,7 +12,7 @@ resource "aws_eks_cluster" "sta_cluster" {
     endpoint_private_access = false
     endpoint_public_access  = true
     public_access_cidrs     = ["0.0.0.0/0"]
-    security_group_ids = var.sec
+    security_group_ids = [var.sec]
     # public_access_cidrs     = var.public_access_cidrs1
   }
 
