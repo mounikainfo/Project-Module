@@ -34,19 +34,19 @@ output "cluster_certificate_authority_data" {
 #   value       = aws_eks_cluster.eks_cluster.identity[0].oidc[0].issuer
 # }
 
-output "aws_iam_openid_connect_provider_arn" {
-  description = "AWS IAM Open ID Connect Provider ARN"
-  value       = aws_iam_openid_connect_provider.oidc_provider.arn
-}
+# output "aws_iam_openid_connect_provider_arn" {
+#   description = "AWS IAM Open ID Connect Provider ARN"
+#   value       = aws_iam_openid_connect_provider.oidc_provider.arn
+# }
 
 
 output  "identity"  { 
   value = aws_eks_cluster.sta_cluster.identity[0].oidc[0].issuer
 }
 
-output "thumb" {
-  value = aws_iam_openid_connect_provider.oidc_provider
-}
+# output "thumb" {
+#   value = aws_iam_openid_connect_provider.oidc_provider
+# }
 
 
 output "identity_all" {
