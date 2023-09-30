@@ -29,10 +29,10 @@ output "cluster_certificate_authority_data" {
 
 
 
-output "cluster_oidc_issuer_url" {
-  description = "The URL on the EKS cluster OIDC Issuer"
-  value       = aws_eks_cluster.sta_cluster.identity[0].oidc[0].issuer
-}
+# output "cluster_oidc_issuer_url" {
+#   description = "The URL on the EKS cluster OIDC Issuer"
+#   value       = aws_eks_cluster.sta_cluster.identity[0].oidc[0].issuer
+# }
 
 # output "aws_iam_openid_connect_provider_arn" {
 #   description = "AWS IAM Open ID Connect Provider ARN"
