@@ -53,7 +53,7 @@ output "identity_all" {
   value = aws_eks_cluster.sta_cluster.identity
 }
 
-# output "aws_iam_openid_connect_provider_extract_from_arn" {
-#   description = "AWS IAM Open ID Connect Provider extract from ARN"
-#   value       = local.aws_iam_oidc_connect_provider_extract_from_arn
-# }
+output "aws_iam_openid_connect_provider_extract_from_arn" {
+  description = "AWS IAM Open ID Connect Provider extract from ARN"
+  value       = local.aws_iam_oidc_connect_provider_extract_from_arn
+}
