@@ -1,6 +1,6 @@
 data "aws_partition" "current" {}
 
-resource "aws_iam_openid_connect_provider" "oidc_provider1" {
+resource "aws_iam_openid_connect_provider" "oidc_provider" {
     client_id_list  = ["sts.${data.aws_partition.current.dns_suffix}"]
     # client_id_list = "sts.amazonaws.com"
     # thumbprint_list = ["9e99a48a9960b14926bb7f3b02e22da2b0ab7280"]
@@ -10,7 +10,7 @@ resource "aws_iam_openid_connect_provider" "oidc_provider1" {
 
 output "aws_iam_openid_connect_provider_arn" {
   description = "AWS IAM Open ID Connect Provider ARN"
-  value       = aws_iam_openid_connect_provider.oidc_provider1.arn
+  value       = aws_iam_openid_connect_provider.oidc_provider.arn
 }
 
 locals {

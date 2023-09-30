@@ -36,7 +36,7 @@ output "cluster_certificate_authority_data" {
 
 # output "aws_iam_openid_connect_provider_arn" {
 #   description = "AWS IAM Open ID Connect Provider ARN"
-#   value       = aws_iam_openid_connect_provider.oidc_provider1.arn
+#   value       = aws_iam_openid_connect_provider.oidc_provider.arn
 # }
 
 
@@ -45,7 +45,7 @@ output  "identity"  {
 }
 
 output "thumb" {
-  value = aws_iam_openid_connect_provider.oidc_provider1
+  value = aws_iam_openid_connect_provider.oidc_provider
 }
 
 
