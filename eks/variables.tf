@@ -18,3 +18,6 @@ variable "max_size" {}
 variable "min_size" {}
 variable "max_unavailable" {}
 
+variable "thumbprint_list" {
+}
+
